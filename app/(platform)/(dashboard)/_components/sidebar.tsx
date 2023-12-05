@@ -75,7 +75,7 @@ export function Sidebar({ storageKey= "t-sidebar-state" } : SidebarProps) {
           variant={'ghost'}
           className='ml-auto'
         >
-          <Link href='/select-og'>
+          <Link href='/select-org'>
               <Plus className='h-4 w-4'/>
           </Link>
         </Button>
