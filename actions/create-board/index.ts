@@ -8,6 +8,8 @@ import { InputType, ReturnType } from './types';
 import { auth } from '@clerk/nextjs';
 import { createSafeAction } from '@/lib/create-safe-action';
 import { CreateBoard } from './schema';
+import { createAuditLog } from '@/lib/create-audit-log';
+import { ACTION, ENTITY_TYPE } from '@prisma/client';
 
 
 const handler = async (data: InputType): Promise<ReturnType> => {
@@ -46,6 +48,14 @@ const handler = async (data: InputType): Promise<ReturnType> => {
         imageUserName
       }
     });
+
+    await createAuditLog({
+      entityId: board.id,
+      entityTitle: board.title,
+      entityType: ENTITY_TYPE.BOARD,
+      action: ACTION.CREATE
+     })
+
   } catch (error) {
     return {
       error: 'Failed to create.'

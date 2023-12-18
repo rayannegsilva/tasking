@@ -4,7 +4,7 @@ This application is for project management. Where, the user can register with go
 
 # ⚒ Technologies and tools
 
-- [NextJs](https://nextjs.org/)
+- [NextJs 14](https://nextjs.org/)
 - [Prisma](https://www.prisma.io/)
 - [MySQL](https://www.mysql.com/)
 - [Stripe](https://stripe.com)

@@ -7,6 +7,7 @@ import { revalidatePath } from "next/cache";
 import { createSafeAction } from "@/lib/create-safe-action";
 import { UpdateCardOrder } from "./schema"
 
+
 const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId, orgId } = auth();
 
@@ -21,21 +22,21 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
   try {
     const transaction = items.map((card) =>
-    db.card.update({
-      where: {
-        id: card.id,
-        list: {
-          board: {
-            orgId
+      db.card.update({
+        where: {
+          id: card.id,
+          list: {
+            board: {
+              orgId
+            }
           }
+        },
+        data: {
+          order: card.order,
+          listId: card.listId
         }
-      },
-      data: {
-        order: card.order,
-        listId: card.listId
-      }
-    })
-   )
+      })
+    )
 
   updateCards = await db.$transaction(transaction)
   } catch (error) {
