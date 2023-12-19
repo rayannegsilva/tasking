@@ -12,7 +12,7 @@ export default function PlatformLayout({
   return (
     <ClerkProvider>
      <QueryProvider>
-        <Toaster />
+        <Toaster richColors />
         <ModalProvider />
         {children}
       </QueryProvider>
