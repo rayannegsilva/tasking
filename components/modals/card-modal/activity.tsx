@@ -15,7 +15,7 @@ export function Activity ({ items }: ActivityProps) {
        <ActivityIcon className="h-5 w-5 mt-0.5 text-neutral-700"/>
        <div className="w-full">
         <p className="font-semibold text-neutral-700 mb-2">
-          Activity
+          Atividade
         </p>
         <ol className="mt-2 space-y-4">
           {items.map((item) => (

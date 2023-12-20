@@ -71,7 +71,7 @@ export function Actions({ data } : ActionsProps) {
         size={"inline"}
       >
         <Copy className="text-neutral-700 h-4 w-4 mr-2"/>
-        Copy
+        Copiar
       </Button>
       <Button
         onClick={onDelete}
@@ -81,7 +81,7 @@ export function Actions({ data } : ActionsProps) {
         size={"inline"}
       >
         <Trash className="text-neutral-700 h-4 w-4 mr-2"/>
-         Delete
+         Deletar
       </Button>
     </div>
   )
