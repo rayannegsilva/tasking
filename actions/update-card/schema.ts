@@ -6,11 +6,11 @@ export const UpdateCard = z.object({
     z.string({
       required_error: 'Description is required',
       invalid_type_error: 'Description is required'
-    }).min(3, {
+    }).min(0, {
       message: 'Description is too short'
     })
   ),
-  title :z.optional(z.string({
+  title: z.optional(z.string({
     required_error: 'Title is missing',
     invalid_type_error: 'Title is required'
   }).min(3, {

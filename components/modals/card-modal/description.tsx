@@ -76,7 +76,7 @@ export function Description ({ data }: DescriptionProps) {
       <AlignLeft className="w-5 h-5 mt-0.5 text-neutral-700"/>
       <div className="w-full">
         <p className=" text-neutral-700 font-semibold mb-2">
-          Description
+          Descrição
         </p>
 
         { isEditing ? (
@@ -93,10 +93,10 @@ export function Description ({ data }: DescriptionProps) {
             />
             <div className="flex items-center gap-x-2">
               <FormSubmit>
-                Save
+                Salvar
               </FormSubmit>
               <Button type="button" onClick={disableEditing} size={"sm"} variant={"ghost"}>
-                Cancel
+                Cancelar
               </Button>
             </div>
           </form>

@@ -1,4 +1,4 @@
-# Tasking
+# <img src='public/logo-indigo.svg' with='30'  heigh='30' /> Tasking
 
 This application is for project management. Where, the user can register with google and create workspaces.
 
