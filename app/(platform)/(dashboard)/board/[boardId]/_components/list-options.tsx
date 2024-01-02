@@ -54,7 +54,6 @@ export function ListOptions ({ data, onAddCard }: ListOptionsProps) {
     executeDelete({ id, boardId })
   }
 
-
   const onCopy = (formData: FormData) => {
     const id = formData.get('id') as string
     const boardId = formData.get('boardId') as string
@@ -71,7 +70,7 @@ export function ListOptions ({ data, onAddCard }: ListOptionsProps) {
         </PopoverTrigger>
       <PopoverContent className="px-0 pt-3 pb-3" side="bottom" align="start">
         <div className="text-sm font-medium text-center text-neutral-600 pb-4">
-          List actions
+          Ações da lista
         </div>
         <PopoverClose ref={closeRef} asChild>
           <Button className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600" variant="ghost">
@@ -83,7 +82,7 @@ export function ListOptions ({ data, onAddCard }: ListOptionsProps) {
           className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
           variant="ghost"
         >
-          Add card...
+          Adicionar cartão
         </Button>
         <form
           action={onCopy}
@@ -104,7 +103,7 @@ export function ListOptions ({ data, onAddCard }: ListOptionsProps) {
             className="rounded-non w-full h-auto p-2 px-5 justify-start font-normal text-sm"
             variant="ghost"
           >
-            Copy list
+            Copiar lista
           </FormSubmit>
         </form>
         <Separator />
@@ -125,7 +124,7 @@ export function ListOptions ({ data, onAddCard }: ListOptionsProps) {
             variant="ghost"
             className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
           >
-            Delete this list
+            Deletar lista
           </FormSubmit>
         </form>
       </PopoverContent>

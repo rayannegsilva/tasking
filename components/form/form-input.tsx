@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef } from "react";
+import { KeyboardEventHandler, forwardRef } from "react";
 import { useFormStatus } from "react-dom";
 
 import { cn } from "@/lib/utils";
@@ -19,7 +19,8 @@ interface FormInputProps {
   errors?: Record<string, string[] | undefined>;
   className?: string;
   defaultValue?: string;
-  onBlur?: () => void;
+  onBlur?: (e?: React.FocusEvent<HTMLInputElement>) => void;
+  onKeyDown?: KeyboardEventHandler<HTMLInputElement> | undefined
 };
 
 export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
@@ -32,7 +33,8 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
   errors,
   className,
   defaultValue = "",
-  onBlur
+  onBlur,
+  onKeyDown
 }, ref) => {
   const { pending } = useFormStatus();
 
@@ -57,6 +59,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
           placeholder={placeholder}
           type={type}
           disabled={pending || disabled}
+          onKeyDown={onKeyDown}
           className={cn(
             "text-sm px-2 py-1 h-7",
             className,

@@ -49,7 +49,7 @@ export default function MarketingPage() {
         "text-sm md:text-base 2xl:text-lg text-zinc-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto",
         textFont.className
         )}>
-         Plataforma baseada em Kanban que simplifica o fluxo de tarefas. Crie workspaces colaborativos e convide sua equipe
+        Plataforma baseada em Kanban que simplifica o fluxo de tarefas. Crie workspaces colaborativos e convide sua equipe
         para uma gestão de projetos mais ágil e organizada.
       </div>
       <Button className="mt-6" size={"lg"} asChild>

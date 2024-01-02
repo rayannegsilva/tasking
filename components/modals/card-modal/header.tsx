@@ -15,7 +15,7 @@ interface HeaderProps {
   data: CardWithList
 }
 
-export function Header ({ data }:HeaderProps) {
+export function Header ({ data }: HeaderProps) {
   const queryClient = useQueryClient()
   const params = useParams()
 
@@ -58,7 +58,7 @@ export function Header ({ data }:HeaderProps) {
 
   return (
     <div className="flex items-start gap-x-3 mb-6 w-full">
-      <Layout className="w-5 h-5 mt-1 text-neutral-700"/>
+      <Layout className="w-5 h-5 mt-1 text-zinc-700"/>
       <div className="w-full">
         <form action={onSubmit}>
           <FormInput

@@ -10,7 +10,6 @@ import { forwardRef, ElementRef, KeyboardEventHandler, useRef } from "react"
 import { useParams } from 'next/navigation'
 import { useOnClickOutside, useEventListener } from "usehooks-ts"
 import { toast } from "sonner"
-import { totalmem } from "os"
 
 interface CardFormProps {
   listId: string
@@ -69,14 +68,14 @@ export const CardForm = forwardRef<HTMLTextAreaElement,CardFormProps>(({listId, 
           id="title"
           onKeyDown={onTextareaKeyDown}
           ref={ref}
-          placeholder="Enter a title for this card..."
+          placeholder="Digite um título para esse cartão..."
           errors={fieldErrors}
         />
         <input hidden id='listId' name='listId' value={listId}/>
-        <input hidden id='boardId' name='boardId' value={params.  boardId}/>
+        <input hidden id='boardId' name='boardId' value={params.boardId}/>
         <div className="flex items-center gap-x-1">
           <FormSubmit>
-            Add card
+            Adicionar cartão
           </FormSubmit>
           <Button onClick={disableEditing} size='sm' variant={"ghost"}>
               <X className="w-5 h-5" />
@@ -95,7 +94,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement,CardFormProps>(({listId, 
         variant={"ghost"}
       >
         <Plus className="h-4 w-4 mr-2"/>
-        Add a card
+        Adicionar cartão
       </Button>
     </div>
   )

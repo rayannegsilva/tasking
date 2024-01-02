@@ -10,7 +10,6 @@ import { ListWithCards } from "@/types"
 import { UseAction } from "@/hooks/use-action"
 import { updateListOrder } from "@/actions/update-list-order"
 import { toast } from "sonner"
-import { UpdateCardOrder } from "@/actions/update-card-order/schema"
 import { updateCardOrder } from "@/actions/update-card-order"
 
 interface ListContainerProps {
@@ -25,8 +24,6 @@ function reorder<T>(list: T[], startIndex: number, endIndex: number) {
 
   return result
 };
-
-
 
 export function  ListContainer ({ boardId, data }: ListContainerProps) {
   const [orderData, setOrderData] = useState(data)

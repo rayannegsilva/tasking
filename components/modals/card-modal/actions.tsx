@@ -2,12 +2,13 @@
 
 import { copyCard } from "@/actions/copy-card"
 import { deleteCard } from "@/actions/delete-card"
+import { ChecklistPopover } from "@/components/checklist-popover"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
 import { UseAction } from "@/hooks/use-action"
 import { useCardModel } from "@/hooks/use-card-model"
 import { CardWithList } from "@/types"
-import { Copy, Trash } from "lucide-react"
+import { CheckSquare, Copy, Trash } from "lucide-react"
 import { useParams } from "next/navigation"
 import { toast } from "sonner"
 
@@ -61,8 +62,13 @@ export function Actions({ data } : ActionsProps) {
   return (
     <div className="space-y-2 mt-2">
       <p className="text-xs font-semibold">
-        Actions
+        Ações do cartão
       </p>
+      <ChecklistPopover
+        data={data}
+        side="bottom"
+        sideOffset={10}
+        />
       <Button
         onClick={onCopy}
         disabled={isLoadingCopy}

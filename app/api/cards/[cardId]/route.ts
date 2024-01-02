@@ -24,8 +24,15 @@ export async function GET(req: Request, { params }: {params: { cardId: string}})
           select: {
             title: true
           }
+        },
+        checklist: {
+          select: {
+            id: true,
+            checkitems: true,
+            title: true,
+          }
         }
-      }
+      },
     })
 
     return  NextResponse.json(card)

@@ -4,7 +4,7 @@ import { deleteBoard } from '@/actions/delete-board'
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverContent, PopoverTrigger, PopoverClose} from '@/components/ui/popover'
 import { UseAction } from '@/hooks/use-action'
-import { MoreHorizontal, X } from 'lucide-react'
+import { MoreHorizontal, Trash, X } from 'lucide-react'
 import { toast } from 'sonner'
 
 interface BoardOptionsProps {
@@ -31,7 +31,7 @@ export function BoardOptions({ id } : BoardOptionsProps) {
       </PopoverTrigger>
       <PopoverContent className='px-0 pt-3 pb-3' side='bottom' align='start'>
         <div className='text-sm font-medium text-center text-neutral-600 pb-4 '>
-          Board actions
+          Ações do Quadro
         </div>
         <PopoverClose asChild>
           <Button
@@ -47,7 +47,8 @@ export function BoardOptions({ id } : BoardOptionsProps) {
           disabled={isLoading}
           className='rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm'
         >
-          Delete this board
+          <Trash className='w-4 h-4 mr-2 text-zinc-600'/>
+          Deletar esse Quadro
         </Button>
       </PopoverContent>
     </Popover>

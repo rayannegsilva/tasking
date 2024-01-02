@@ -79,7 +79,7 @@ export function Description ({ data }: DescriptionProps) {
           Descrição
         </p>
 
-        { isEditing ? (
+        {isEditing ? (
           <form
             action={onSubmit}
             ref={formRef}
@@ -106,7 +106,7 @@ export function Description ({ data }: DescriptionProps) {
             role="button"
             className="min-h-[78px] bg-neutral-200 text-sm font-medium py-3 px-3.5 rounded-md"
           >
-          {data.description || 'Add a more detailed description...'}
+          {data.description || 'Adicione uma descrição mais detalhada...'}
           </div>
         )}
 

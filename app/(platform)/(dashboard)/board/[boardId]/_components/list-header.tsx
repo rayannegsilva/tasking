@@ -1,7 +1,6 @@
 'use client'
 
 import { updateList } from "@/actions/update-list"
-import { UpdateList } from "@/actions/update-list/schema"
 import { FormInput } from "@/components/form/form-input"
 import { UseAction } from "@/hooks/use-action"
 import { List } from "@prisma/client"

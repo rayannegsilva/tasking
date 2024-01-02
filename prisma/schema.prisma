@@ -56,9 +56,41 @@ model Card {
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 
+  checklist     Checklist[]
 
   @@index([listId])
 }
+
+model Checklist {
+  id            String @id @default(uuid())
+  title         String
+
+  checkitems    Checkitems[]
+
+  cardId         String
+  card           Card @relation(fields: [cardId], references: [id], onDelete: Cascade)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([cardId])
+}
+
+model Checkitems {
+  id        String @id @default(uuid())
+  text      String
+
+  isCheck    Boolean   @default(false)
+
+  checklistId     String
+  checklist       Checklist @relation(fields: [checklistId], references: [id], onDelete: Cascade)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([checklistId])
+}
+
 
 enum ACTION {
   CREATE

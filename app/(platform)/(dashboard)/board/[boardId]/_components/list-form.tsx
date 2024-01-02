@@ -3,7 +3,7 @@
 import { Plus, X } from "lucide-react"
 import { ListWrapper } from "./list-wrapper"
 
-import  { useState, useRef, ElementRef } from 'react'
+import { useState, useRef, ElementRef } from 'react'
 import { useEventListener, useOnClickOutside } from "usehooks-ts"
 import { FormInput } from "@/components/form/form-input"
 import { useParams, useRouter } from "next/navigation"
@@ -72,7 +72,7 @@ export function ListForm() {
             errors={fieldErrors}
             id='title'
             className="text-sm px-2 py-1 h-7 font-medium border-transparent hover:border-input focus:border-input transition"
-            placeholder="Enter list title..."
+            placeholder="Informe um título para a lista..."
           />
           <input
             hidden
@@ -99,7 +99,7 @@ export function ListForm() {
           className="w-full rounded-md bg-white/80 hover:bg-white/50 transition p-3 flex items-center font-medium text-sm"
         >
           <Plus className="h-4 w-4 mr-2"/>
-          Add a list
+            Adicionar lista
         </button>
     </ListWrapper>
   )

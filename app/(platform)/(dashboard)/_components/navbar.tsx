@@ -18,7 +18,7 @@ export function NavBar() {
           <Button variant={"primary"} size={"sm"} className="rounded-sm hidden md:block h-auto py-1
             px-2
           ">
-            Create
+            Criar
           </Button>
         </FormPopover>
         <FormPopover>

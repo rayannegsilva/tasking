@@ -1,4 +1,4 @@
 export const siteConfig = {
   name: "Tasking",
-  description: "Collaborate, manage projects, and reach new productivity peaks",
+  description: "Crie workspaces colaborativos e convide sua equipe para uma gestão de projetos mais ágil e organizada",
 };

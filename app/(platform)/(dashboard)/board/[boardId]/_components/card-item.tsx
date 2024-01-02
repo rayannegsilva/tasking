@@ -4,7 +4,6 @@ import { Card } from "@prisma/client"
 import { Draggable } from '@hello-pangea/dnd'
 import { useCardModel } from "@/hooks/use-card-model"
 import { AlignJustify } from "lucide-react"
-import { FormPopover } from "@/components/form/form-popover"
 import { Hint } from "@/components/hint"
 
 interface CardItemProps {
@@ -29,7 +28,7 @@ export function CardItem({ data, index }: CardItemProps) {
       >
         {data.title}
 
-          { data.description?.length! > 0 &&
+          {data.description?.length! > 0 &&
             <div className="flex justify-end">
               <Hint
                 sideOffset={10}

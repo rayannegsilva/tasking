@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 export const UpdateCard = z.object({
+  id: z.string(),
   boardId: z.string(),
   description: z.optional(
     z.string({
@@ -16,5 +17,4 @@ export const UpdateCard = z.object({
   }).min(3, {
     message: 'Title is too short'
   })),
-  id: z.string(),
 })

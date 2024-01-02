@@ -1,6 +1,6 @@
 # <img src='public/logo-indigo.svg' with='30'  heigh='30' /> Tasking
 
-This application is for project management. Where, the user can register with google and create workspaces.
+This application is for project management. Where, the user can register with google, create workspaces and boards.
 
 # ⚒ Technologies and tools
 
@@ -13,7 +13,7 @@ This application is for project management. Where, the user can register with go
 - [shadcnUI](https://ui.shadcn.com/)
 - [Tailwindcss](https://tailwindcss.com/)
 
-# Prerequisites
+# Pre requisites
 
 You need [Nodejs](https://nodejs.org/en) 18.x.x > version. This project brings a dockerfile, where you can run a database on your machine. You must have docker installed, and MySQL! Run docker compose up to upload the container.
 
