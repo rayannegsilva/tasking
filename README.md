@@ -21,21 +21,22 @@ You need [Nodejs](https://nodejs.org/en) 18.x.x > version. This project brings a
 - [x] Auth with clerk.
 - [x] Creating workspaces
 - [x] Creation of tables, lists and cards.
-- [x] Drag and Drop between lists and cards
+- [x] Drag and Drop between lists and cards.
 - [x] Board limit per workspace.
 - [x] Subscription with Stripe.
 - [x] Copy list.
 - [x] Copy board.
+- [x] Create checklist in cards.
+- [x] Create Check items.
 
 # To add
 
-- [] Night mode
-- [] Add members to card
-- [] Copy board.
-- [] Archive items
+- [ ] Night mode.
+- [ ] Add members to card.
+- [ ] Archive items
+- [ ] Drag and Drop between Check items and Checklists
+- [ ] Delete Check items.
 
-# Run
 
-To run the stripe, you need to register and create an account for the project. With that, install the Stripe CLI. In API Keys, copy the secret key in the .env file, in STRIPE_API_KEY. In webhooks, with Stripe CLI installed, copy and paste the commands into the terminal.
 
 
