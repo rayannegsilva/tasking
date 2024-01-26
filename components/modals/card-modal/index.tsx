@@ -8,10 +8,9 @@ import { fetcher } from '@/lib/fetcher'
 import { Header } from "./header"
 import { Description } from "./description"
 import { Actions } from "./actions"
-import { AuditLog, Checklist } from "@prisma/client"
+import { AuditLog } from "@prisma/client"
 import { Activity } from "./activity"
 import { ChecklistForm } from "./checklist"
-
 
 export function CardModal() {
   const id = useCardModel((state) => state.id)
@@ -28,13 +27,12 @@ export function CardModal() {
     queryFn: () => fetcher(`/api/cards/${id}/logs`),
   });
 
-
   return (
     <Dialog
       open={isOpen}
       onOpenChange={onClose}
     >
-      <DialogContent>
+      <DialogContent className="max-h-[566px] overflow-auto overscroll-y-auto ">
         {!cardData
           ? <Header.Skeleton />
           : <Header data={cardData}/>
@@ -50,7 +48,7 @@ export function CardModal() {
 
               {!cardData?.checklist
                 ? <ChecklistForm.Skeleton />
-                : <ChecklistForm
+                : <ChecklistForm 
                     data={cardData.checklist}
                     cardId={cardData.id}
                   />

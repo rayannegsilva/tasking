@@ -28,13 +28,14 @@ You need [Nodejs](https://nodejs.org/en) 18.x.x > version. This project brings a
 - [x] Copy board.
 - [x] Create checklist in cards.
 - [x] Create Check items.
+- [x] Update Check items.
+
 
 # To add
 
 - [ ] Night mode.
-- [ ] Add members to card.
 - [ ] Archive items
-- [ ] Drag and Drop between Check items and Checklists
+- [ ] Drag and Drop between Check items and Checklists.
 - [ ] Delete Check items.
 
 

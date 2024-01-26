@@ -24,7 +24,6 @@ export function ChecklistFormTitle ({ data, cardId }: ChecklistFormTitleProps) {
   const params = useParams()
 
   const [title, setTitle] = useState(data.title)
-  const [isEditing, setIsEditing] = useState(false)
 
   const formRef = useRef<ElementRef<'form'>>(null)
   const inputRef = useRef<ElementRef<'input'>>(null)
@@ -53,7 +52,7 @@ export function ChecklistFormTitle ({ data, cardId }: ChecklistFormTitleProps) {
         queryKey: ["card", cardId],
       })
 
-      toast.success(`A checklist ${data.title} foi deletada com sucesso.`)
+      toast.success(`A checklist ${data.title} foi adicionada com sucesso.`)
     }
   })
 

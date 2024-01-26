@@ -14,10 +14,10 @@ import { useEventListener, useOnClickOutside } from "usehooks-ts"
 
 interface ChecklistItemsFormProps {
   checklistId: string
-  enableEditing: () => void
-  disableEditing: (e?: React.MouseEvent<HTMLButtonElement> | any) =>  void
   isEditing: boolean
   cardId: string
+  enableEditing: () => void
+  disableEditing: (e?: React.MouseEvent<HTMLButtonElement> | any) =>  void
 }
 
 export const ChecklistItemsForm = forwardRef<HTMLInputElement,ChecklistItemsFormProps>((
@@ -32,7 +32,7 @@ export const ChecklistItemsForm = forwardRef<HTMLInputElement,ChecklistItemsForm
         queryClient.invalidateQueries({
           queryKey: ["card", cardId],
         })
-        toast.success(`A checklist ${data.text} foi deletada com sucesso.`)
+        toast.success(`A checklist ${data.text} foi adicionada com sucesso.`)
       },
       onError: (error) => {
         toast.error(error)

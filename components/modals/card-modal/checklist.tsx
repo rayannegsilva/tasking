@@ -6,7 +6,6 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { ChecklistItemsForm } from "./checklist-items-form"
 import { ChecklistWithItems } from "@/types"
 import { ElementRef, useRef, useState } from "react"
-import { FormChecklist } from "@/components/form/form-checklist"
 import { ChecklistItemsList } from "./checklist-items-list"
 
 interface ChecklistProps {
@@ -18,7 +17,6 @@ export function ChecklistForm ({ data, cardId }: ChecklistProps) {
   const inputRef = useRef<ElementRef<'input'>>(null)
 
   const [isEditing, setIsEditing] = useState(false)
-  const [isChecked, setIsChecked] = useState(false)
 
   const disableEditing = (e: React.MouseEvent<HTMLButtonElement> | undefined) => {
     e?.preventDefault();
@@ -49,9 +47,10 @@ export function ChecklistForm ({ data, cardId }: ChecklistProps) {
           cardId={cardId}
         />
 
-      <div className="my-3">
+      <div className="my-4">
         {checklist.checkitems.map((item) => (
           <ChecklistItemsList
+            cardId={cardId}
             key={item.id}
             data={item}
             checklistId={checklist.id}
@@ -72,7 +71,8 @@ export function ChecklistForm ({ data, cardId }: ChecklistProps) {
     ))}
   </>
   )
-}
+  }
+
 
 
 ChecklistForm.Skeleton = function ChecklistFormSkeleton () {
